@@ -4,6 +4,7 @@ from reframe.core.pipeline import RegressionMixin
 from reframe.utility.sanity import make_performance_function
 
 from eessi.testsuite import hooks
+from eessi.testsuite import __version__ as EESSI_TESTSUITE_VERSION
 from eessi.testsuite.constants import DEVICE_TYPES, SCALES, COMPUTE_UNIT
 
 
@@ -32,6 +33,7 @@ class EESSI_Mixin(RegressionMixin):
     """
 
     # Current version of the EESSI test suite
+    eessi_testsuite_version = variable(str, value=EESSI_TESTSUITE_VERSION)
 
     measure_memory_usage = False
     scale = parameter(SCALES.keys())
