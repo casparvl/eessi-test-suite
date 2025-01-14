@@ -154,7 +154,7 @@ class EESSI_OSU_pt2pt_GPU(EESSI_OSU_pt2pt_Base, EESSI_Mixin):
             self.skip_if(
                 num_gpus != 2,
                 f"Skipping test : {num_gpus} GPU(s) available for this test case, need exactly 2"
-        )
+            )
         # If the scale is 1_node, make sure there are at least 2 GPUs
         elif self.scale == '1_node':
             self.skip_if(num_gpus < 2, "Skipping GPU test : only 1 GPU available for this test case")
